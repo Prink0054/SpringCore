@@ -2,17 +2,20 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:mvc="http://www.springframework.org/schema/mvc"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:p="http://www.springframework.org/schema/p"
+    
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+<!-- Value as a tag -->
 
 <bean class="com.java.SpringCore.Student" name="student1">
 
 <property name="studentId">
-<value>12345</value>
+<value>00</value>
 </property>
 
 <property name="studentName">
@@ -24,11 +27,42 @@
 <value>
 Delhi
 </value>
-
 </property>
 
 </bean>
 
 
+<!-- Value as a attribute -->
+
+<bean class="com.java.SpringCore.Student" name="student2">
+
+<property name="studentId" value="123"/>
+
+
+<property name="studentName" value="prinkpal"/>
+
+
+<property name="studentAddress"  value="delhi"/>
+
+
+
+</bean>
+
+
+
+
+
+
+
+<!-- Value as a p schema -->
+
+<bean class="com.java.SpringCore.Student" name="student3" p:studentId="123" p:studentName="Ram Singh" p:studentAddress="MUmba"/>
+
+
+
+
+
+
 
 </beans>
+
